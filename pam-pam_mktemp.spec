@@ -25,11 +25,14 @@ kontem przez PAM.
 %setup -q -n %{modulename}-%{version}
 
 %build
-%{__make} CFLAGS="-Wall -fPIC -DLINUX_PAM %{rpmcflags}"
+%{__make} \
+	CFLAGS="-Wall -fPIC -DLINUX_PAM %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -45,4 +48,4 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc LICENSE README
-/lib/security/pam_mktemp.so
+%attr(755,root,root) /%{_lib}/security/pam_mktemp.so
