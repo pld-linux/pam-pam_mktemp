@@ -7,7 +7,7 @@ Release:	0.1
 License:	relaxed BSD and (L)GPL-compatible
 Group:		Applications/System
 URL:		http://www.openwall.com/pam/
-Source0:	ftp://ftp.openwall.com/pub/projects/pam/modules/%{modulename}/%{modulename}-%version.tar.gz
+Source0:	ftp://ftp.openwall.com/pub/projects/pam/modules/%{modulename}/%{modulename}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
