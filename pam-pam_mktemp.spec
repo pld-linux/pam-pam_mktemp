@@ -6,14 +6,15 @@ Version:	0.2.5
 Release:	0.1
 License:	relaxed BSD and (L)GPL-compatible
 Group:		Applications/System
-URL:		http://www.openwall.com/pam/
 Source0:	ftp://ftp.openwall.com/pub/projects/pam/modules/%{modulename}/%{modulename}-%{version}.tar.gz
+# Source0-md5:	72bd983f9ebdc47bd8e4dc220cfecaff
+URL:		http://www.openwall.com/pam/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-PAM module which may be used with a PAM-aware login
-service to provide per-user private directories under /tmp as a part
-of PAM session or account management.
+PAM module which may be used with a PAM-aware login service to provide
+per-user private directories under /tmp as a part of PAM session or
+account management.
 
 %description -l pl
 Modu³ PAM zapewniaj±cy podczas logowania prywatny podkatalog /tmp dla
