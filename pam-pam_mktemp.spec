@@ -1,6 +1,6 @@
 %define 	modulename pam_mktemp
 Summary:	Pluggable private /tmp space support for interactive (shell) sessions.
-Summary(pl):	Modu³ PAM zarz±dzaj±cy prywatn± przestrzeni± tymczasowych plików u¿ytkownika
+Summary(pl.UTF-8):   ModuÅ‚ PAM zarzÄ…dzajÄ…cy prywatnÄ… przestrzeniÄ… tymczasowych plikÃ³w uÅ¼ytkownika
 Name:		pam-%{modulename}
 Version:	0.2.5
 Release:	0.1
@@ -16,9 +16,9 @@ PAM module which may be used with a PAM-aware login service to provide
 per-user private directories under /tmp as a part of PAM session or
 account management.
 
-%description -l pl
-Modu³ PAM zapewniaj±cy podczas logowania prywatny podkatalog /tmp dla
-plików tymczasowych danego u¿ytkownika w ramach zarz±dzania sesj± lub
+%description -l pl.UTF-8
+ModuÅ‚ PAM zapewniajÄ…cy podczas logowania prywatny podkatalog /tmp dla
+plikÃ³w tymczasowych danego uÅ¼ytkownika w ramach zarzÄ…dzania sesjÄ… lub
 kontem przez PAM.
 
 %prep
