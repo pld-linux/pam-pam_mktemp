@@ -1,6 +1,6 @@
 %define 	modulename pam_mktemp
 Summary:	Pluggable private /tmp space support for interactive (shell) sessions.
-Summary(pl.UTF-8):   Moduł PAM zarządzający prywatną przestrzenią tymczasowych plików użytkownika
+Summary(pl.UTF-8):	Moduł PAM zarządzający prywatną przestrzenią tymczasowych plików użytkownika
 Name:		pam-%{modulename}
 Version:	0.2.5
 Release:	0.1
