@@ -26,6 +26,7 @@ kontem przez PAM.
 
 %build
 %{__make} \
+	CC="%{__cc}" \
 	CFLAGS="-Wall -fPIC -DLINUX_PAM %{rpmcflags}"
 
 %install
