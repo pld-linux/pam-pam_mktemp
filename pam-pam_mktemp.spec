@@ -2,12 +2,13 @@
 Summary:	Pluggable private /tmp space support for interactive (shell) sessions.
 Summary(pl.UTF-8):	Moduł PAM zarządzający prywatną przestrzenią tymczasowych plików użytkownika
 Name:		pam-%{modulename}
-Version:	0.2.5
+Version:	1.0.3
 Release:	0.1
 License:	relaxed BSD and (L)GPL-compatible
 Group:		Applications/System
 Source0:	ftp://ftp.openwall.com/pub/projects/pam/modules/%{modulename}/%{modulename}-%{version}.tar.gz
-# Source0-md5:	72bd983f9ebdc47bd8e4dc220cfecaff
+# Source0-md5:	0276521b0ce91de356e70a4b82030c0d
+Patch0:		%{name}-include.patch
 URL:		http://www.openwall.com/pam/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,6 +24,7 @@ kontem przez PAM.
 
 %prep
 %setup -q -n %{modulename}-%{version}
+%patch0 
 
 %build
 %{__make} \
