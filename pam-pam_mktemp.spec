@@ -1,15 +1,16 @@
 %define 	modulename pam_mktemp
-Summary:	Pluggable private /tmp space support for interactive (shell) sessions.
+Summary:	Pluggable private /tmp space support for interactive (shell) sessions
 Summary(pl.UTF-8):	Moduł PAM zarządzający prywatną przestrzenią tymczasowych plików użytkownika
 Name:		pam-%{modulename}
 Version:	1.0.3
-Release:	0.1
+Release:	1
 License:	relaxed BSD and (L)GPL-compatible
 Group:		Applications/System
 Source0:	ftp://ftp.openwall.com/pub/projects/pam/modules/%{modulename}/%{modulename}-%{version}.tar.gz
 # Source0-md5:	0276521b0ce91de356e70a4b82030c0d
 Patch0:		%{name}-include.patch
 URL:		http://www.openwall.com/pam/
+BuildRequires:	pam-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -18,13 +19,13 @@ per-user private directories under /tmp as a part of PAM session or
 account management.
 
 %description -l pl.UTF-8
-Moduł PAM zapewniający podczas logowania prywatny podkatalog /tmp dla
-plików tymczasowych danego użytkownika w ramach zarządzania sesją lub
-kontem przez PAM.
+Moduł PAM zapewniający podczas logowania prywatny podkatalog /tmp
+dla plików tymczasowych danego użytkownika w ramach zarządzania
+sesją lub kontem przez PAM.
 
 %prep
 %setup -q -n %{modulename}-%{version}
-%patch0 
+%patch0
 
 %build
 %{__make} \
