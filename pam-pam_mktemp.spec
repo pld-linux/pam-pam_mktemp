@@ -25,7 +25,7 @@ sesją lub kontem przez PAM.
 
 %prep
 %setup -q -n %{modulename}-%{version}
-%patch0
+%patch -P0
 
 %build
 %{__make} \
